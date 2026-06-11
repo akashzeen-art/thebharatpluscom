@@ -7,8 +7,6 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const menuRef = useRef<HTMLDivElement>(null);
-  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
-
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -27,8 +25,7 @@ export const Header = () => {
 
   const handleAccount = () => {
     setOpen(false);
-    if (isAuthenticated) navigate("/account");
-    else window.dispatchEvent(new CustomEvent("openAuthModal"));
+    navigate("/account");
   };
 
   return (
