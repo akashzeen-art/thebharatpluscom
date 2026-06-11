@@ -10,3 +10,10 @@
 export interface DemoResponse {
   message: string;
 }
+
+export interface AccountResponse {
+  phone: string;
+  plan: string;
+  isPremium: boolean;
+  planLabel: string;
+}
