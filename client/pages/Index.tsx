@@ -5,7 +5,7 @@ import { AuthModal } from "@/components/AuthModal";
 import { VideoModal } from "@/components/VideoModal";
 import { Footer } from "@/components/Footer";
 import { VIDEOS, getAllCategories, getVideosByCategory } from "@/data/videos";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Play, Flame, Crosshair, Eye, Skull, Lock, TrendingUp, Star, ChevronLeft, ChevronRight, Shield, Zap } from "lucide-react";
 
 const HERO_IDS = ["1","43","96","67","16","7"];
@@ -198,6 +198,7 @@ function HeroSection({ heroVideos, onWatch, onBrowse }: { heroVideos: typeof VID
 
 export default function Index() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [categories, setCategories] = useState<string[]>([]);
   const [authModalOpen, setAuthModalOpen] = useState(false);
@@ -207,6 +208,10 @@ export default function Index() {
   useEffect(() => {
     setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true");
     setCategories(getAllCategories());
+    if ((location.state as any)?.openAuth) {
+      setAuthModalOpen(true);
+      window.history.replaceState({}, "");
+    }
   }, []);
 
   useEffect(() => {

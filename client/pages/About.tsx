@@ -27,10 +27,10 @@ export default function About() {
         {/* About */}
         <div className="rounded-2xl border border-white/10 bg-zinc-900/60 p-6 mb-5">
           <p className="text-white/70 leading-relaxed mb-4">
-            Zeen Digital Solutions LLP is a premium digital streaming platform focused on fitness and yoga content. Our mission is to make expert-led wellness programs accessible to everyone through a flexible, subscription-based streaming service.
+            Zeen Digital Solutions LLP is a premium OTT streaming platform delivering movies, web series, TV shows, live channels, documentaries, and exclusive entertainment across multiple devices with a secure subscription experience.
           </p>
           <p className="text-white/70 leading-relaxed">
-            Our library covers beginner-friendly yoga, strength training, cardio, and mindful movement — with new series added regularly.
+            Our library features blockbuster movies, binge-worthy web series, TV shows, live channels, documentaries, and exclusive originals with fresh content added regularly.
           </p>
         </div>
 
@@ -39,9 +39,9 @@ export default function About() {
           <h2 className="text-lg font-black text-white mb-4">What We Offer</h2>
           <ul className="space-y-3">
             {[
-              "Premium yoga and fitness video content",
-              "Unlimited streaming on any device",
-              "Expert-led workout programs",
+              "Premium movies, web series, TV shows & live channels",
+              "HD & 4K streaming with multi-device access",
+              "Personalized recommendations & regular content updates",
               "Flexible subscription plans",
               "New content added regularly",
             ].map((item) => (
@@ -51,6 +51,9 @@ export default function About() {
               </li>
             ))}
           </ul>
+          <p className="text-white/40 text-xs mt-4 leading-relaxed">
+            Disclaimer: Content is provided for entertainment purposes only. Availability may vary by region, licensing, and subscription plan. Unauthorized reproduction or redistribution is prohibited.
+          </p>
         </div>
 
         {/* Company Details */}

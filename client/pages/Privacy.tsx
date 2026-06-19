@@ -13,7 +13,7 @@ const sections = [
   { num: "7", title: "Children's Privacy", content: "Our Services are not intended for users under the age of 16. We do not knowingly collect personal data from children. If you believe a child has submitted personal information through our platform, please contact us immediately at reetesh.kumar@zeendigital.com and we will take prompt steps to delete such information from our records.", email: "reetesh.kumar@zeendigital.com" },
   { num: "8", title: "Security and Data Retention", content: "We strive to use commercially acceptable means to protect your data. We retain your Personal Data only as long as necessary for the purposes set out in this policy." },
   { num: "9", title: "Your Rights", content: "You have the right to access, correct, update, or delete the personal information we hold about you. Contact us through the information below." },
-  { num: "10", title: "Disclaimer", content: `The content provided on this platform, including all workout programs, exercise videos, training sessions, and related materials, is intended for general fitness and wellness purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Users are advised to consult a qualified healthcare professional before starting any new fitness or exercise program, especially if they have any pre-existing medical conditions, injuries, or health concerns.\n\nBy participating in these workouts and activities, you acknowledge that you do so voluntarily and at your own risk. The platform, trainers, and instructors shall not be held responsible for any injuries, damages, or losses that may occur as a result of using this content. Individual results may vary based on body type, fitness level, consistency, and lifestyle.` },
+  { num: "10", title: "Disclaimer", content: "Content is provided for entertainment purposes only. Availability may vary by region, licensing, and subscription plan. Unauthorized reproduction or redistribution is prohibited." },
   { num: "11", title: "Governing Law and Jurisdiction", content: "These Terms shall be governed and interpreted in accordance with the laws of India. Any disputes arising out of or relating to the use of this website shall be subject to the exclusive jurisdiction of the courts located in Gurgaon, Haryana." },
   { num: "12", title: "Updates to This Policy", content: "We may update our Privacy Policy from time to time. We will notify you of changes by posting the new policy on this page." },
 ];
@@ -37,7 +37,7 @@ export default function Privacy() {
 
         <div className="rounded-2xl border border-indigo-500/20 bg-gradient-to-br from-indigo-950/30 to-zinc-900/60 p-6 mb-5">
           <p className="legal-body">
-            This Privacy Policy describes how Zeen Digital Solutions LLP collects, uses, and shares information about you when you use our services.
+            This Privacy Policy describes how Zeen Digital Solutions LLP (operating Zeen Digital Solutions LLP) collects, uses, and shares information about you when you use our services.
           </p>
         </div>
 
