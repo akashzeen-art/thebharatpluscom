@@ -47,7 +47,7 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
         </button>
 
         {/* Step indicator */}
-        <div className="flex items-center px-8 pt-8 mb-6">
+        <div className="flex items-center px-4 sm:px-8 pt-8 mb-6">
           <div className={`flex items-center gap-2 text-xs font-bold uppercase tracking-widest ${step === "phone" ? "text-primary" : "text-white/30"}`}>
             <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-black ${step === "phone" ? "bg-primary text-black" : "bg-white/10 text-white/30"}`}>1</div>
             Phone
@@ -59,7 +59,7 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
           </div>
         </div>
 
-        <div className="px-8 pb-8">
+        <div className="px-4 sm:px-8 pb-8">
           {step === "phone" ? (
             <div className="space-y-6">
               <div>
@@ -72,19 +72,24 @@ export const AuthModal = ({ isOpen, onClose, onSuccess }: AuthModalProps) => {
 
               <form onSubmit={handlePhoneSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-xs font-bold text-white/50 uppercase tracking-widest mb-2">Phone Number</label>
-                  <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus-within:border-primary/50 transition-colors">
-                    <span className="text-white/40 text-sm font-bold">+91</span>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <label className="text-xs font-bold text-white/50 uppercase tracking-widest">Phone Number</label>
+                    <span className="text-xs text-white/40 tabular-nums flex-shrink-0">{phone.length}/10</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-3 sm:px-4 py-3 focus-within:border-primary/50 transition-colors">
+                    <span className="flex-shrink-0 whitespace-nowrap text-white/70 text-base font-bold tabular-nums">+91</span>
+                    <span className="flex-shrink-0 w-px h-5 bg-white/10" aria-hidden="true" />
                     <input
                       type="tel"
+                      inputMode="numeric"
+                      autoComplete="tel-national"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                       placeholder="10-digit number"
                       maxLength={10}
                       autoFocus
-                      className="flex-1 bg-transparent text-white placeholder:text-white/20 focus:outline-none text-sm"
+                      className="min-w-0 flex-1 w-full bg-transparent text-white placeholder:text-white/20 focus:outline-none text-base"
                     />
-                    <span className="text-xs text-white/20">{phone.length}/10</span>
                   </div>
                 </div>
                 <button
